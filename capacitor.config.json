@@ -1,0 +1,11 @@
+{
+  "appId": "ru.olimpiadnik.app",
+  "appName": "Олимпиадник",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#EEF1F6"
+  },
+  "ios": {
+    "contentInset": "never"
+  }
+}
