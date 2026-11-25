@@ -24,12 +24,12 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
 
       - name: Install dependencies
         run: npm install
 
-      - name: Install Capacitor Android
+      - name: Install Capacitor
         run: npm install @capacitor/android @capacitor/cli
 
       - name: Create Android project
@@ -39,7 +39,7 @@ jobs:
         run: npx cap sync android
 
       - name: Build APK
-        run: cd android && gradle assembleDebug
+        run: cd android && chmod +x gradlew && ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
